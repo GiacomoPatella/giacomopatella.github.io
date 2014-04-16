@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Vegas VERA</title>
+
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.vegas.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/vera.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.vegas.css" />
+  <link rel="stylesheet" type="text/css" href="css/hover.min.css" />
 </head>
 <body>
-<div style="width:100%; height:100px; background:teal;"></div>
-<div><img src="timeline.png"></div>
-  
-</div>
+<nav id="navbar">
+  <div>
+    <ul class="nav-left">
+      <li class="name"><a href="index.html">VERA</a></li>
+    </ul>
+  </div>
+  <div >
+    <ul class="nav-right">
+      <li><a href="lookbook.html" id="lookbook">Lookbook</a></li>
+      <li><a href="#" id="design">Design</a></li>
+      <li><a href="#" id="about">About</a></li>
+      <li><a href="#" id="contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section> 
+  <div id="contact-portal" class="portal">
+        <p class="portal-title">CONTACT US</p>
+        <p class="email"><a href="mailto:verafashion@gmail.com">verafashion@gmail.com</a></p>
+        <p class="social"><a href="#">FACEBOOK</a> &nbsp;//  &nbsp;<a href="#">TWITTER</a>  &nbsp;//  &nbsp;<a href="#">LINKEDIN</a></p>
+  </div>
+
+  <div id="about-portal" class="portal">
+        <p class="portal-title">ABOUT US</p>
+        <article class="portal-body">Lorizzle shizznit dolizzle sizzle amizzle, consectetuer adipiscing elit. Nullam dang away, its fo rizzle volutpizzle, shiznit rizzle, gravida i'm in the shizzle, fo shizzle. Pellentesque check out this tortor. Ma nizzle nizzle. Check it out nizzle gizzle dapibus turpis tempizzle sheezy. Mauris pellentesque nibh et turpis. Funky fresh izzle tortor. Sizzle away boofron break it down. In hac habitasse platea dictumst. Nizzle dapibizzle. Curabitizzle tellus urna, pizzle own yo', ac, eleifend vitae, nunc. Daahng dawg suscilam dang away, its fo rizzle volutpizzle, shiznit rizzle, gravida i'm in the shizzle, fo shizzle. Pellentesque check out this tortor. Ma nizzle nizzle. Check it out nizzle gizzle dapibus turpis tempizzle sheezy. Mauris pellentesque nibh et turpis. Funky fresh izzle tortor. Sizzle away boofron break it down. In hac habitasse platea dictumst. Nizzle dapibizzle. Curabitizzle tellus urna, pizzle own yo', ac, eleifend vitae, nunc. Daahng dawg suscipizzle. Fo shizzle my nizzle gizzle the bizzle sizzle gangsta. Nullam dang away, its fo rizzle volutpizzle, shiznit rizzle, gravida i'm in the shizzle, fo shizzle. 
+        </article>
+  </div>
+</section>
+
+
+<script>
+
+ $(document).ready(function() {
+
+  $.vegas('slideshow', {
+    backgrounds: [
+      { src:'images/vera-bg-4.png', fade:600},
+      { src:'images/vera-bg-1.png', fade:1500},
+      { src:'images/vera-bg-2.png', fade:1500},
+      { src:'images/vera-bg-3.png', fade:1500},
+      { src:'images/vera-bg-5.png', fade:1500},
+      { src:'images/vera-bg-6.png', fade:1500},
+      { src:'images/vera-bg-7.png', fade:1500},
+      { src:'images/vera-bg-8.png', fade:1500},
+      { src:'images/vera-bg-9.png', fade:1500},
+      { src:'images/vera-bg-10.png', fade:1500},
+      { src:'images/vera-bg-11.png', fade:1500},
+      { src:'images/vera-bg-14.png', fade:1500}
+    ]  
+  }); 
+  // end of .vegas 
+      $.vegas('overlay', {
+        src:'overlays/01.png'
+  });
+
+        $('#about').click(function() {
+            $('#contact-portal').fadeOut("fast");
+                $('#about-portal').delay(200).fadeToggle("slow");
+        });
+
+        $('#contact').click(function() {
+            $('#about-portal').fadeOut("fast");
+                $('#contact-portal').delay(200).fadeToggle("slow");
+        });
+});
+</script>
+
 </body>
 </html>
+<!-- .siblings().hide("slow") -->
